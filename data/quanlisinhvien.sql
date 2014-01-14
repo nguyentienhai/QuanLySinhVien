@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.9
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2014 at 09:06 PM
--- Server version: 5.6.11
--- PHP Version: 5.5.3
+-- Generation Time: Jan 14, 2014 at 04:05 PM
+-- Server version: 5.6.14
+-- PHP Version: 5.5.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `quanlisinhvien`
 --
-CREATE DATABASE IF NOT EXISTS `quanlisinhvien` DEFAULT CHARACTER SET utf8 COLLATE utf8_vietnamese_ci;
-USE `quanlisinhvien`;
 
 -- --------------------------------------------------------
 
@@ -131,6 +129,27 @@ CREATE TABLE IF NOT EXISTS `thongtinsinhvien` (
 INSERT INTO `thongtinsinhvien` (`MaSV`, `Hoten`, `Ngaysinh`, `Gioitinh`, `Quequan`) VALUES
 ('C1122H047', 'Nguyá»…n Tháº¿ Anh', '10/07/1991', '', ''),
 ('C44335', 'Nguyá»…n Minh ChÃ¢u', '7/1990', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE IF NOT EXISTS `user` (
+  `SoTT` int(11) NOT NULL,
+  `Username` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Password` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `Email` varchar(50) COLLATE utf8_vietnamese_ci NOT NULL,
+  PRIMARY KEY (`SoTT`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_vietnamese_ci;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`SoTT`, `Username`, `Password`, `Email`) VALUES
+(1, 'admin', 'admin', 'admin@gmail.com');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
