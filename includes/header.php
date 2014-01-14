@@ -21,7 +21,25 @@
 			<li><a href='#'>About</a></li>
 			<li><a href='#'>Liên hệ</a></li>
 			<li><a href='#'>Hỏi - Đáp</a></li>
+			
+			<?php
+				session_start();
+				if( isset($_SESSION['userid']) == null ){ 
+					echo "<li><a HREF = 'login/main_login.php'>Đăng nhập</a></li>"; 
+				} else
+				{
+					echo "<li><a HREF = '../login/logout.php'>Đăng xuất</a></li>"; 
+				}
+			?>
 		</ul>
+        <?php
+			if ( isset($_SESSION['userid']) == null )
+			{
+				echo "<p class='greeting'>Xin chào Khách!</p>";
+			} else
+			{
+				echo "<p class='greeting'>Xin chào ".$_SESSION['userid']."!</p>";
+			}
+		?>
         
-        <p class="greeting">Xin chào bạn!</p>
 </div><!-- end navigation-->

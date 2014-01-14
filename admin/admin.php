@@ -17,5 +17,5 @@
         </p>
     </div>
 </div><!--end content-->
-<?php include('../includes/sidebar-b.php');?>
+
 <?php include('../includes/footer.php'); ?>

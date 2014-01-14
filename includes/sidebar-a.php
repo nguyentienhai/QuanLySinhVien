@@ -13,6 +13,6 @@
        */
         ?> 
             
-       <li><a href="admin/view_diem.php">Bảng điểm Sinh Viên</a></li>
+       <li><a href="view_diem.php">Bảng điểm Sinh Viên</a></li>
 	   </ul>
 </div><!--end section-navigation-->
